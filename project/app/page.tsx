@@ -6,6 +6,7 @@ import { TrendingUp, Brain, BarChart3, MessageSquare, ArrowRight, Target, Shield
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { mockStockData } from '@/lib/mockData';
+import { Analytics } from "@vercel/analytics/next"
 
 const features = [
   {
