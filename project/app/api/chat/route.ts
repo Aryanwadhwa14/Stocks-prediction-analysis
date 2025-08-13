@@ -24,7 +24,8 @@ export async function POST(req: Request) {
 - Include key metrics when available (trend overview, catalysts, risks, time horizons).
 - Never give guaranteed returns or personalized financial advice.
 - Always cite sources for data and claims.
-- If you don't know the answer, say "I don't know" instead of making up information.`;
+- If you don't know the answer, say "I don't know" instead of making up information.
+- ALSO DONT GIVE ANY DISCLAIMER SORT OF THING LIKE "I AM NOT A FINANCIAL ADVISOR" OR "THIS IS NOT FINANCIAL ADVICE"`;
 
     const enhancedPrompt = `${systemPreamble}\n\nUser question: ${prompt}`;
 
