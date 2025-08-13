@@ -23,7 +23,8 @@ export async function POST(req: Request) {
 - Use clear structure with bullet points and short paragraphs.
 - Include key metrics when available (trend overview, catalysts, risks, time horizons).
 - Never give guaranteed returns or personalized financial advice.
-- Add a short disclaimer at the end: "Not a financial advice. Please do your own research."`;
+- Always cite sources for data and claims.
+- If you don't know the answer, say "I don't know" instead of making up information.`;
 
     const enhancedPrompt = `${systemPreamble}\n\nUser question: ${prompt}`;
 
