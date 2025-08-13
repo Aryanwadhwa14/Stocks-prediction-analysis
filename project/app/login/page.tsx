@@ -20,28 +20,27 @@ export default function LoginPage() {
   const { toast } = useToast();
 
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsLoading(true);
+  e.preventDefault();
+  setIsLoading(true);
 
-    try {
-      const result = await signIn('credentials', {
-        email,
-        password,
-        redirect: false,
-      });
+  try {
+    const result = await signIn('credentials', {
+      email,
+      password,
+      redirect: true,             // ✅ Let NextAuth handle the redirect
+      callbackUrl: '/dashboard',  // ✅ Send them here on success
+    });
 
-      if (result?.error) {
-        toast({ title: 'Error', description: 'Invalid credentials. Try demo@example.com / demo123', variant: 'destructive' });
-      } else {
-        toast({ title: 'Success', description: 'Successfully logged in!' });
-        router.push('/dashboard');
-      }
-    } catch (error) {
-      toast({ title: 'Error', description: 'An error occurred. Please try again.', variant: 'destructive' });
-    } finally {
-      setIsLoading(false);
+    if (result?.error) {
+      toast({ title: 'Error', description: 'Invalid credentials.', variant: 'destructive' });
     }
-  };
+  } catch (error) {
+    toast({ title: 'Error', description: 'An error occurred. Please try again.', variant: 'destructive' });
+  } finally {
+    setIsLoading(false);
+  }
+ };
+
 
   const handleGoogle = async () => {
     await signIn('google', { callbackUrl: '/dashboard' });

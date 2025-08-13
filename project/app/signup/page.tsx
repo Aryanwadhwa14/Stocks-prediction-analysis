@@ -31,58 +31,67 @@ export default function SignupPage() {
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsLoading(true);
+  e.preventDefault();
+  setIsLoading(true);
 
-    // Validation
-    if (formData.password !== formData.confirmPassword) {
-      toast({ title: 'Error', description: 'Passwords do not match.', variant: 'destructive' });
-      setIsLoading(false);
-      return;
+  // Validation
+  if (formData.password !== formData.confirmPassword) {
+    toast({ title: 'Error', description: 'Passwords do not match.', variant: 'destructive' });
+    setIsLoading(false);
+    return;
+  }
+
+  if (formData.password.length < 6) {
+    toast({ title: 'Error', description: 'Password must be at least 6 characters long.', variant: 'destructive' });
+    setIsLoading(false);
+    return;
+  }
+
+  if (!agreedToTerms) {
+    toast({ title: 'Error', description: 'Please agree to the Terms of Service and Privacy Policy.', variant: 'destructive' });
+    setIsLoading(false);
+    return;
+  }
+
+  try {
+    // Create user in your DB
+    const response = await fetch('/api/auth/signup', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        name: formData.name,
+        email: formData.email,
+        password: formData.password,
+      }),
+    });
+
+    const data = await response.json();
+
+    if (!response.ok) {
+      throw new Error(data.error || 'Failed to create account');
     }
 
-    if (formData.password.length < 6) {
-      toast({ title: 'Error', description: 'Password must be at least 6 characters long.', variant: 'destructive' });
-      setIsLoading(false);
-      return;
+    // ✅ Immediately log in via credentials provider
+    const result = await signIn('credentials', {
+      redirect: true,
+      callbackUrl: '/dashboard',
+      email: formData.email,
+      password: formData.password,
+    });   
+
+    if (result?.error) {
+      toast({ title: 'Error', description: result.error, variant: 'destructive' });
     }
-
-    if (!agreedToTerms) {
-      toast({ title: 'Error', description: 'Please agree to the Terms of Service and Privacy Policy.', variant: 'destructive' });
-      setIsLoading(false);
-      return;
-    }
-
-    // Create user account
-    try {
-      const response = await fetch('/api/auth/signup', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          name: formData.name,
-          email: formData.email,
-          password: formData.password,
-        }),
-      });
-
-      const data = await response.json();
-
-      if (!response.ok) {
-        throw new Error(data.error || 'Failed to create account');
-      }
-
-      toast({ title: 'Success', description: 'Account created successfully! Please sign in.' });
-      router.push('/login');
-    } catch (error) {
-      toast({ 
-        title: 'Error', 
-        description: error instanceof Error ? error.message : 'An error occurred. Please try again.', 
-        variant: 'destructive' 
-      });
-    } finally {
-      setIsLoading(false);
-    }
-  };
+  } catch (error) {
+    toast({ 
+      title: 'Error', 
+      description: error instanceof Error ? error.message : 'An error occurred. Please try again.', 
+      variant: 'destructive' 
+    });
+  } finally {
+    setIsLoading(false);
+  }
+};
 
   const handleGoogle = async () => {
     await signIn('google', { callbackUrl: '/dashboard' });
