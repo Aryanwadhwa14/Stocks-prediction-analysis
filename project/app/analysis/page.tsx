@@ -2,6 +2,8 @@
 
 import { motion } from 'framer-motion';
 import { BarChart3, TrendingUp, Newspaper, Brain, Activity, Target, AlertTriangle, LineChart } from 'lucide-react';
+import Link from 'next/link';
+import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Progress } from '@/components/ui/progress';
 import { Badge } from '@/components/ui/badge';
@@ -580,12 +582,109 @@ export default function AnalysisPage() {
           </div>
         </div>
 
-        {/* Educational Section */}
+        {/* Market News Section */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.6, duration: 0.6 }}
+          className="mt-12"
+        >
+          <Card className="border-gray-200 dark:border-gray-700 shadow-lg">
+            <CardHeader className="text-center">
+              <CardTitle className="text-2xl flex items-center justify-center">
+                <Newspaper className="h-6 w-6 mr-2 text-blue-600" />
+                Latest Market News
+              </CardTitle>
+              <CardDescription>
+                Stay informed with real-time financial news and market updates
+              </CardDescription>
+            </CardHeader>
+            <CardContent>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="p-4 border border-gray-200 dark:border-gray-700 rounded-lg hover:shadow-md transition-shadow">
+                  <div className="flex items-start gap-3">
+                    <div className="w-2 h-2 bg-green-500 rounded-full mt-2"></div>
+                    <div>
+                      <h4 className="font-semibold mb-2">Fed Policy Update</h4>
+                      <p className="text-sm text-gray-600 dark:text-gray-400 mb-2">
+                        Federal Reserve maintains current interest rates, signals cautious approach to future changes.
+                      </p>
+                      <div className="flex gap-2">
+                        <Badge variant="outline" className="text-xs">Markets</Badge>
+                        <Badge variant="outline" className="text-xs text-green-700 border-green-200">Positive</Badge>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+                <div className="p-4 border border-gray-200 dark:border-gray-700 rounded-lg hover:shadow-md transition-shadow">
+                  <div className="flex items-start gap-3">
+                    <div className="w-2 h-2 bg-blue-500 rounded-full mt-2"></div>
+                    <div>
+                      <h4 className="font-semibold mb-2">Tech Earnings Season</h4>
+                      <p className="text-sm text-gray-600 dark:text-gray-400 mb-2">
+                        Major tech companies report mixed quarterly results, AI investments drive growth.
+                      </p>
+                      <div className="flex gap-2">
+                        <Badge variant="outline" className="text-xs">Business</Badge>
+                        <Badge variant="outline" className="text-xs text-blue-700 border-blue-200">Neutral</Badge>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+                <div className="p-4 border border-gray-200 dark:border-gray-700 rounded-lg hover:shadow-md transition-shadow">
+                  <div className="flex items-start gap-3">
+                    <div className="w-2 h-2 bg-red-500 rounded-full mt-2"></div>
+                    <div>
+                      <h4 className="font-semibold mb-2">Oil Price Volatility</h4>
+                      <p className="text-sm text-gray-600 dark:text-gray-400 mb-2">
+                        Crude oil prices fluctuate amid geopolitical tensions and supply concerns.
+                      </p>
+                      <div className="flex gap-2">
+                        <Badge variant="outline" className="text-xs">Commodities</Badge>
+                        <Badge variant="outline" className="text-xs text-red-700 border-red-200">Negative</Badge>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+                <div className="p-4 border border-gray-200 dark:border-gray-700 rounded-lg hover:shadow-md transition-shadow">
+                  <div className="flex items-start gap-3">
+                    <div className="w-2 h-2 bg-green-500 rounded-full mt-2"></div>
+                    <div>
+                      <h4 className="font-semibold mb-2">Retail Sales Surge</h4>
+                      <p className="text-sm text-gray-600 dark:text-gray-400 mb-2">
+                        Consumer spending exceeds expectations, indicating strong economic recovery.
+                      </p>
+                      <div className="flex gap-2">
+                        <Badge variant="outline" className="text-xs">Economy</Badge>
+                        <Badge variant="outline" className="text-xs text-green-700 border-green-200">Positive</Badge>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="mt-6 text-center">
+                <Link href="/news">
+                  <Button variant="outline" className="hover:bg-blue-50 dark:hover:bg-blue-900/20">
+                    <Newspaper className="h-4 w-4 mr-2" />
+                    View All News
+                  </Button>
+                </Link>
+              </div>
+            </CardContent>
+          </Card>
+        </motion.div>
+
+        {/* Educational Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.7, duration: 0.6 }}
           className="mt-12"
         >
           <Card className="border-gray-200 dark:border-gray-700 shadow-lg">

@@ -5,7 +5,7 @@ import { useRouter } from 'next/navigation';
 import { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
-import { TrendingUp, BarChart3, Target, DollarSign, AlertCircle, Star, ArrowRight, LineChart } from 'lucide-react';
+import { TrendingUp, BarChart3, Target, DollarSign, AlertCircle, Star, ArrowRight, LineChart, Newspaper } from 'lucide-react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
@@ -484,11 +484,64 @@ export default function DashboardPage() {
               </Card>
             </motion.section>
 
-            {/* Market Summary */}
+            {/* Latest News */}
             <motion.section
               initial={{ opacity: 0, x: 20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 1.0, duration: 0.6 }}
+            >
+              <Card className="border-gray-200 dark:border-gray-700 shadow-lg">
+                <CardHeader>
+                  <CardTitle className="flex items-center">
+                    <Newspaper className="h-5 w-5 mr-2 text-blue-600" />
+                    Latest News
+                  </CardTitle>
+                  <CardDescription>Top financial headlines</CardDescription>
+                </CardHeader>
+                <CardContent className="space-y-3">
+                  <div className="p-3 bg-blue-50 dark:bg-blue-900/20 rounded-lg border border-blue-200 dark:border-blue-700">
+                    <h4 className="font-semibold text-blue-900 dark:text-blue-100 text-sm mb-1">
+                      Fed Signals Potential Rate Cuts
+                    </h4>
+                    <p className="text-xs text-blue-800 dark:text-blue-200">
+                      Federal Reserve hints at possible interest rate reductions in coming months
+                    </p>
+                    <div className="flex items-center gap-2 mt-2">
+                      <Badge variant="outline" className="text-xs">Markets</Badge>
+                      <Badge variant="outline" className="text-xs text-green-700 border-green-200">Positive</Badge>
+                    </div>
+                  </div>
+
+                  <div className="p-3 bg-green-50 dark:bg-green-900/20 rounded-lg border border-green-200 dark:border-green-700">
+                    <h4 className="font-semibold text-green-900 dark:text-green-100 text-sm mb-1">
+                      Tech Earnings Beat Expectations
+                    </h4>
+                    <p className="text-xs text-green-800 dark:text-green-200">
+                      Major tech companies report stronger-than-expected quarterly results
+                    </p>
+                    <div className="flex items-center gap-2 mt-2">
+                      <Badge variant="outline" className="text-xs">Business</Badge>
+                      <Badge variant="outline" className="text-xs text-green-700 border-green-200">Positive</Badge>
+                    </div>
+                  </div>
+
+                  <div className="pt-3 border-t border-gray-200 dark:border-gray-700">
+                    <Link href="/news">
+                      <Button variant="outline" size="sm" className="w-full">
+                        View All News
+                        <ArrowRight className="h-3 w-3 ml-2" />
+                      </Button>
+                    </Link>
+                  </div>
+                </CardContent>
+              </Card>
+            </motion.section>
+
+            {/* Market Summary */}
+            <motion.section
+              initial={{ opacity: 0, x: 20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: 1.1, duration: 0.6 }}
             >
               <Card className="border-gray-200 dark:border-gray-700 shadow-lg">
                 <CardHeader>
