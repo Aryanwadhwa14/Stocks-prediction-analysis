@@ -27,6 +27,81 @@ StockAI is a simple, modern platform for stock prediction and analysis. It combi
 
 ---
 
+### Project Structure
+
+```/
+├── project/
+│   ├── app/
+│   │   ├── page.tsx
+│   │   ├── dashboard/
+│   │   ├── predictions/
+│   │   ├── advisor/
+│   │   ├── analytics/
+│   │   ├── portfolio/
+│   │   ├── globals.css
+│   │   └── layout.tsx
+│   ├── components/
+│   │   ├── ui/
+│   │   │   ├── button.tsx
+│   │   │   ├── card.tsx
+│   │   │   ├── input.tsx
+│   │   │   ├── chart.tsx
+│   │   │   └── dialog.tsx
+│   │   ├── charts/
+│   │   │   ├── StockChart.tsx
+│   │   │   ├── PredictionChart.tsx
+│   │   │   ├── TechnicalChart.tsx
+│   │   │   └── PortfolioChart.tsx
+│   │   ├── prediction/
+│   │   │   ├── PredictionCard.tsx
+│   │   │   ├── ConfidenceScore.tsx
+│   │   │   ├── RiskAssessment.tsx
+│   │   │   └── SignalIndicator.tsx
+│   │   ├── advisor/
+│   │   │   ├── ChatInterface.tsx
+│   │   │   ├── MessageBubble.tsx
+│   │   │   ├── SuggestionCard.tsx
+│   │   │   └── AnalysisReport.tsx
+│   │   └── layout/
+│   │       ├── Header.tsx
+│   │       ├── Sidebar.tsx
+│   │       ├── Footer.tsx
+│   │       └── MobileNav.tsx
+│   ├── lib/
+│   │   ├── utils.ts
+│   │   ├── api.ts
+│   │   ├── ml-utils.ts
+│   │   ├── validators.ts
+│   │   ├── constants.ts
+│   │   └── types.ts
+│   ├── hooks/
+│   │   ├── useStockData.ts
+│   │   ├── usePredictions.ts
+│   │   ├── usePortfolio.ts
+│   │   └── useWebSocket.ts
+│   ├── public/
+│   │   ├── images/
+│   │   ├── icons/
+│   │   └── favicon.ico
+│   ├── styles/
+│   │   └── globals.css
+│   ├── package.json
+│   ├── next.config.js
+│   ├── tailwind.config.ts
+│   ├── tsconfig.json
+│   └── .env.local (gitignored)
+│
+├── ML Backend / notebooks:
+│   ├── stock_prediction_lstm.ipynb
+│   ├── technical_analysis.ipynb
+│   ├── model_training.py
+│   └── data_preprocessing.py
+│
+├── README.md
+├── LICENSE
+├── vercel.json
+└── requirements.txt
+```
 ## Quick Start
 
 1. **Clone & Install**
