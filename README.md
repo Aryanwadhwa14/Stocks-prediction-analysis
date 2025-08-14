@@ -10,7 +10,7 @@
 
 ---
 
-## 🚀 What is StockAI?
+##  What is StockAI?
 
 StockAI is a simple, modern platform for stock prediction and analysis. It combines deep learning (LSTM) for price forecasting, technical analysis tools, and an AI-powered chat advisor all in a clean, responsive web app.
 
@@ -217,7 +217,7 @@ model = Sequential([
 - **Directional Accuracy**: Prediction of price direction
 - **Sharpe Ratio**: Risk-adjusted returns
 
-## 🎨 Features Showcase
+##  Features Showcase
 
 ### Landing Page
 - Hero section with value proposition
@@ -383,7 +383,7 @@ We welcome contributions! Here's how to get started:
 - **Google Gemini**: For AI advisor capabilities
 - **Open Source Community**: For inspiration and resources
 
-## 📄 License
+## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
@@ -391,7 +391,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 <div align="center">
 
-**⭐ Star this repository if you find it helpful!**
+** Star this repository if you find it helpful!**
 
 [**🌐 Live Demo**](https://stocks-prediction-analysis.vercel.app/) • [**📚 Documentation**](./docs) • [**Report Bug**](https://github.com/Aryanwadhwa14) • [**✨ Request Feature**](https://github.com/Aryanwadhwa14/Stocks-prediction-analysis/issues)
 
