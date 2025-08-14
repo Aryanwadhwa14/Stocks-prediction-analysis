@@ -6,7 +6,7 @@
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
 [![TensorFlow](https://img.shields.io/badge/TensorFlow-2.0+-orange.svg)](https://tensorflow.org/)
 
-> **Live Demo:** [https://stocks-prediction-analysis.vercel.app/](https://stocks-prediction-analysis.vercel.app/)
+> **Live Demo:** [https://stocks-prediction-analysis.vercel.app/](https://stocks-prediction-analysis.vercel.app/) 
 
 ---
 
