@@ -37,7 +37,7 @@ const courses = [
     id: 3,
     title: 'AI in Financial Markets',
     description: 'Understand how machine learning and AI are revolutionizing investment strategies and market analysis.',
-    difficulty: 'Advanced',
+    difficulty: 'Advanced',  
     duration: '3 hours',
     lessons: 10,
     icon: Brain,
