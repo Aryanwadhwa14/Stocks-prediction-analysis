@@ -71,7 +71,7 @@ export default function SignupPage() {
       throw new Error(data.error || 'Failed to create account');
     }
 
-    // ✅ Immediately log in via credentials provider
+    //  Immediately log in via credentials provider
     const result = await signIn('credentials', {
       redirect: true,
       callbackUrl: '/dashboard',
