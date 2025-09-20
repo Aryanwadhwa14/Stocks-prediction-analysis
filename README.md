@@ -56,8 +56,9 @@ StockAI is a simple, modern platform for stock prediction and analysis. It combi
 │   │   ├── advisor/
 │   │   ├── analytics/
 │   │   ├── portfolio/
-│   │   ├── globals.css
-│   │   └── layout.tsx
+│   │   ├── news/
+│   │   |── globals.css
+|   |   └── layout.tsx
 │   ├── components/
 │   │   ├── ui/
 │   │   │   ├── button.tsx
@@ -345,9 +346,8 @@ POST /api/advisor/analyze         # Analyze portfolio
 - [x] Technical analysis tools
 
 ### Phase 2 (In Progress)
-- [ ] Real-time WebSocket data feeds
-- [ ] Advanced portfolio management
-- [ ] Mobile app development
+- [x] Real-time WebSocket data feeds
+- [x] Advanced portfolio management
 - [ ] Social trading features
 
 ### Phase 3 (Planned)
