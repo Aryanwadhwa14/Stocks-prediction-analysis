@@ -27,6 +27,24 @@ StockAI is a simple, modern platform for stock prediction and analysis. It combi
 
 ---
 
+## Project Overview
+
+- **Homepage:** Overview of features and benefits.  
+  <img src="./screenshots/home.png" alt="Homepage Screenshot"/>
+
+- **Dashboard:** Personalized portfolio, market data and AI insights.  
+  <img src="./screenshots/analysis.png" alt="Dashboard Screenshot"/>
+
+- **Predictions:** Search stocks, view forecasts, and technical indicators.  
+  <img src="./screenshots/predict.png" alt="Predictions Screenshot" width="600"/>
+
+- **Learning Resources:** Educational content and blogs on stock trading and AI.  
+  <img src="./screenshots/learn.png" alt="Learning Resources Screenshot"/>
+
+- **Stocks News and Sentiment:** Latest news and sentiment analysis.  
+  <img src="./screenshots/news.png" alt="News and Sentiment Screenshot"/>
+
+---
 ### Project Structure
 
 ```/
