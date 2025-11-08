@@ -19,7 +19,7 @@ const teamMembers = [
     specialization: 'AI/ML, Deep Learning, LLMs',
     github: 'https://github.com/Aryanwadhwa14',
     linkedin: 'https://www.linkedin.com/in/aryan-wadhwa-073727252/',
-    twitter: 'https://x.com/aryan17198',
+    twitter: 'https://x.com/aryan70283',
     email: 'https://aryanwadhwa14@gmail.com',
     skills: ['Python', 'TensorFlow', 'PyTorch', 'Scikit-learn', 'NLP', 'Computer Vision'],
     achievements: [
