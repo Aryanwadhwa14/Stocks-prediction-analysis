@@ -14,7 +14,6 @@ const navItems = [
   { name: 'Analysis', href: '/analysis' },
   { name: 'News', href: '/news' },
   { name: 'Learn', href: '/learn' },
-  { name: 'Team', href: '/team' },
   { name: 'About', href: '/about' },
 ];
 
