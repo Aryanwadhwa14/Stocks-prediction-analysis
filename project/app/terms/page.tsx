@@ -95,7 +95,6 @@ export default function TermsPage() {
           <Card className="border-gray-200 dark:border-gray-700">
             <CardHeader>
               <CardTitle className="flex items-center">
-                <Shield className="h-5 w-5 mr-2 text-blue-600" />
                 5. Data & Privacy
               </CardTitle>
             </CardHeader>
