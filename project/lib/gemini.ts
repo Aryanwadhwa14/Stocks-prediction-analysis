@@ -21,4 +21,4 @@ export async function generateResponse(prompt: string): Promise<string> {
     console.error('Error generating response:', error);
     return 'I apologize, but I encountered an error processing your request. Please try again.';
   }
-}
+}   
