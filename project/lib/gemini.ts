@@ -1,6 +1,4 @@
-import { GoogleGenerativeAI } from '@google/generative-ai';
-
-const genAI = new GoogleGenerativeAI(process.env.NEXT_PUBLIC_GEMINI_API_KEY!);
+// lib/generateResponse.ts
 
 export async function generateResponse(prompt: string): Promise<string> {
   try {
@@ -11,14 +9,18 @@ export async function generateResponse(prompt: string): Promise<string> {
     });
 
     if (!res.ok) {
-      const err = await res.json().catch(() => ({}));
-      throw new Error(err.error || 'Failed to get response');
+      const errorText = await res.text();
+      console.error('API Error:', errorText);
+      throw new Error('Failed to get response from server');
     }
 
-    const data = (await res.json()) as { text: string };
-    return data.text || 'I could not generate a response at the moment.';
+    const data: { text?: string } = await res.json();
+
+    return data.text?.trim() || 
+      'I could not generate a response at the moment.';
+      
   } catch (error) {
     console.error('Error generating response:', error);
-    return 'I apologize, but I encountered an error processing your request. Please try again.';
+    return 'Server is busy or quota exceeded. Please try again shortly.';
   }
-}   
+}
