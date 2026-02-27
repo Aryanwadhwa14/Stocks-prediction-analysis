@@ -59,7 +59,7 @@
     "framer-motion": "^12.23.12",
     "input-otp": "^1.2.4",
     "lucide-react": "^0.446.0",
-    "next": "^15.4.6",
+    "next": "15.4.10",
     "next-auth": "^4.24.11",
     "next-themes": "^0.3.0",
     "postcss": "8.4.30",
