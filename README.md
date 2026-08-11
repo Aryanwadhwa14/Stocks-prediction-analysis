@@ -1,5 +1,5 @@
 # StockAI - Advanced Stock Prediction & Analysis Platform 
-
+ 
 [![Live Demo](https://img.shields.io/badge/Live-Demo-green)](https://stocks-prediction-analysis.vercel.app/)
 [![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
 [![Next.js](https://img.shields.io/badge/Next.js-14+-black.svg)](https://nextjs.org/)
